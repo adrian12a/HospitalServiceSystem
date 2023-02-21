@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #424242;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainController">
+    <TextArea fx:id="textArea" editable="false" layoutX="9.0" layoutY="54.0" prefHeight="532.0" prefWidth="512.0" />
+   <JFXButton fx:id="startButton" buttonType="RAISED" layoutX="14.0" layoutY="14.0" onAction="#startButtonPressed" ripplerFill="WHITE" style="-fx-background-color: grey;" text="START SERVER" textFill="WHITE" />
+   <JFXButton fx:id="stopButton" buttonType="RAISED" disable="true" layoutX="116.0" layoutY="14.0" onAction="#stopButtonPressed" ripplerFill="WHITE" style="-fx-background-color: grey;" text="STOP SERVER" textFill="WHITE" />
+   <Label layoutX="545.0" layoutY="54.0" prefHeight="192.0" prefWidth="222.0" text="Status&#10;&#10;Serwer:&#10;&#10;Baza danych:" textFill="WHITE">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Label>
+   <Label fx:id="serverStatus" layoutX="602.0" layoutY="137.0" text="Wyłączony" textFill="#ffcb00">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Label>
+   <Label fx:id="databaseStatus" layoutX="640.0" layoutY="186.0" text="Brak połączenia" textFill="#ffcb00">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Label>
+</AnchorPane>

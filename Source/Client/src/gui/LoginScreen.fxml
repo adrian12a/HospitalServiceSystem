@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #424242;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ControllerLogin">
+   <Button layoutX="285.0" layoutY="2.0" mnemonicParsing="false" prefHeight="7.0" prefWidth="25.0" style="-fx-background-color: #424242;" text="Button" textFill="TRANSPARENT" />
+    <Label alignment="CENTER" layoutX="1.0" layoutY="99.0" prefHeight="18.0" prefWidth="300.0" text="Wprowadź dane" textAlignment="CENTER" textFill="#dbdbdb80" />
+    <TextField fx:id="login" layoutX="54.0" layoutY="131.0" prefHeight="40.0" prefWidth="196.0" promptText="Login" style="-fx-background-radius: 20; -fx-background-color: #636e75;" />
+    <PasswordField fx:id="password" layoutX="54.0" layoutY="196.0" prefHeight="40.0" prefWidth="196.0" promptText="Hasło" style="-fx-background-radius: 20; -fx-background-color: #636e75;" />
+    <JFXButton fx:id="loginButton" buttonType="RAISED" layoutX="54.0" layoutY="261.0" onAction="#loginButtonPressed" prefHeight="41.0" prefWidth="196.0" style="-fx-text-fill: #DCDCDD; -fx-background-color: linear-gradient(to bottom, #636e75, #5f686f, #5c6268, #585d62, #54575b); -fx-background-radius: 30;" text="ZALOGUJ" />
+    <Button fx:id="registerButton" layoutX="110.0" layoutY="361.0" mnemonicParsing="false" onAction="#registerButtonPressed" style="-fx-text-fill: #DCDCDD; -fx-background-color: #424242;" text="Zarejestruj się" />
+   <Label fx:id="info" alignment="CENTER" layoutX="1.0" layoutY="314.0" prefHeight="18.0" prefWidth="300.0" textAlignment="CENTER" textFill="#dbdbdb80" />
+</AnchorPane>

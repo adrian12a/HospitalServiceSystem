@@ -1,0 +1,59 @@
+CREATE DATABASE IF NOT EXISTS Szpital;
+
+CREATE TABLE IF NOT EXISTS Pracownicy
+(
+    id int,
+    imię varchar(255),
+    nazwisko varchar(255),
+    login varchar(255),
+    hasło varchar(255),
+    email varchar(255),
+    typ varchar(255),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS TypyBadań
+(
+    id int,
+    nazwa varchar(255),
+    uprawnienia varchar(255),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS Pacjenci
+(
+    id int,
+    imię varchar(255),
+    nazwisko varchar(255),
+    email varchar(255),
+    telefon varchar(255),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS Badania
+(
+    id int,
+    idPracownika int,
+    idPacjenta int,
+    idBadania int,
+    data datetime,
+    opis varchar(255),
+    PRIMARY KEY (id),
+    FOREIGN KEY (idPracownika) REFERENCES Pracownicy(id),
+    FOREIGN KEY (idPacjenta) REFERENCES Pacjenci(id),
+    FOREIGN KEY (idBadania) REFERENCES TypyBadań(id)
+);
+
+CREATE TABLE IF NOT EXISTS Recepty
+(
+    id int,
+    idPacjenta int,
+    data datetime,
+    nazwaLeku varchar(255),
+    ilośćLeku int,
+    PRIMARY KEY (id),
+    FOREIGN KEY (idPacjenta) REFERENCES Pacjenci(id)
+);
+
+INSERT INTO TypyBadań VALUES(1,'Badanie wzroku','Lekarz');
+INSERT INTO TypyBadań VALUES(2,'Pomiar ciśnienia','Lekarz, Pielęgniarka');
